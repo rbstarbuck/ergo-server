@@ -25,6 +25,7 @@ CREATE TABLE ProcessedData(
     FOREIGN KEY (RawVideoFile) REFERENCES RawData(RawVideoFile)
 );
 
-INSERT INTO Scenes (SceneName, DateCreated) VALUES ('Example Scene', CURRENT_TIMESTAMP);
-INSERT INTO RawData (RawVideoFile, InfoFile, SceneName, DateCreated) VALUES ('example.mp4', 'Example Scene', CURRENT_TIMESTAMP);
-INSERT INTO ProcessedData (ProcessedVideoFile, InfoFile, RawVideoFile) VALUES ('example_processed.mp4', 'example_processed.json', 'example.mp4');
+
+INSERT INTO Scenes (SceneName, DateCreated) VALUES ("Example Scene", CURRENT_TIMESTAMP);
+INSERT INTO RawData (RawVideoFile, InfoFile, SceneName, DateCreated) VALUES ("example.mp4", "example.json", "Example Scene", CURRENT_TIMESTAMP);
+INSERT INTO ProcessedData (ProcessedVideoFile, InfoFile, RawVideoFile) VALUES ("example_processed.mp4", "example_processed.json", "example.mp4");
